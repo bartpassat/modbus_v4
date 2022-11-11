@@ -1,0 +1,56 @@
+//============================================================================
+// Name        : TestARM.cpp
+// Author      : Bart
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+#include <ctype.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <termios.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <Serial.h>
+#include <Modbus.h>
+
+
+
+
+
+
+
+
+int main (int argc, char *argv[])
+{
+    int fd;
+    int error = 0;
+    char serialdev[] = "/dev/ttyUSB0";
+    //serialdev[11]=*argv[1];
+
+    puts(serialdev);
+    puts ("Open port");
+
+    fd = openserial(serialdev);
+
+    if (!fd) {
+        fprintf(stderr, "Error while initializing %s.\n", serialdev);
+        return 1;
+    }
+
+    ReadAddress(fd, 0, 0, 1);
+    closeserial(fd);
+    return 0;
+}
+
+
+
