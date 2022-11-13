@@ -1872,3 +1872,263 @@ Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
 default username:password is [debian:temppwd]
 
  
+13:00:58 **** Clean-only build of configuration Debug for project TestARM ****
+make clean 
+rm -rf ./src/Modbus.d ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.d ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.d ./src/Serial.o ./src/TestARM.d ./src/TestARM.o
+rm -rf TestARM
+ 
+13:00:59 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus.d" -MT"src/Modbus.o" -o "src/Modbus.o" "../src/Modbus.c"
+../src/Modbus.c:37:17: warning: ‘RegisterNamesCircutorCVM1D’ defined but not used [-Wunused-variable]
+   37 | static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus.c:33:12: warning: ‘RegistersCircutorCVM1D’ defined but not used [-Wunused-variable]
+   33 | static int RegistersCircutorCVM1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Modbus.c
+ 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/Serial.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -o "src/Serial.o" "../src/Serial.c"
+Finished building: ../src/Serial.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:36:9: warning: unused variable ‘error’ [-Wunused-variable]
+   36 |     int error = 0;
+      |         ^~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.o ./src/TestARM.o   
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.7.2:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+13:01:54 **** Clean-only build of configuration Debug for project TestARM ****
+make clean 
+rm -rf ./src/Modbus.d ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.d ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.d ./src/Serial.o ./src/TestARM.d ./src/TestARM.o
+rm -rf TestARM
+ 
+13:01:55 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus.d" -MT"src/Modbus.o" -o "src/Modbus.o" "../src/Modbus.c"
+../src/Modbus.c:37:17: warning: ‘RegisterNamesCircutorCVM1D’ defined but not used [-Wunused-variable]
+   37 | static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus.c:33:12: warning: ‘RegistersCircutorCVM1D’ defined but not used [-Wunused-variable]
+   33 | static int RegistersCircutorCVM1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Modbus.c
+ 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/Serial.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -o "src/Serial.o" "../src/Serial.c"
+Finished building: ../src/Serial.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:36:9: warning: unused variable ‘error’ [-Wunused-variable]
+   36 |     int error = 0;
+      |         ^~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.o ./src/TestARM.o   
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.7.2:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+13:06:14 **** Clean-only build of configuration Debug for project TestARM ****
+make clean 
+rm -rf ./src/Modbus.d ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.d ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.d ./src/Serial.o ./src/TestARM.d ./src/TestARM.o
+rm -rf TestARM
+ 
+13:06:15 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus.d" -MT"src/Modbus.o" -o "src/Modbus.o" "../src/Modbus.c"
+../src/Modbus.c:37:17: warning: ‘RegisterNamesCircutorCVM1D’ defined but not used [-Wunused-variable]
+   37 | static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus.c:33:12: warning: ‘RegistersCircutorCVM1D’ defined but not used [-Wunused-variable]
+   33 | static int RegistersCircutorCVM1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Modbus.c
+ 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/Serial.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -o "src/Serial.o" "../src/Serial.c"
+Finished building: ../src/Serial.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c:28:1: error: multiple storage classes in declaration specifiers
+   28 | extern static int Circutor_CVM_1D_Address;
+      | ^~~~~~
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:37:9: warning: unused variable ‘error’ [-Wunused-variable]
+   37 |     int error = 0;
+      |         ^~~~~
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: *** [src/subdir.mk:29: src/TestARM.o] Fout 1
+make: *** [makefile:50: all] Fout 2
+"make all" terminated with exit code 2. Build might be incomplete.
+13:06:46 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:35:9: warning: unused variable ‘error’ [-Wunused-variable]
+   35 |     int error = 0;
+      |         ^~~~~
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.o ./src/TestARM.o   
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.7.2:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+13:11:15 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus.d" -MT"src/Modbus.o" -o "src/Modbus.o" "../src/Modbus.c"
+../src/Modbus.c:37:17: warning: ‘RegisterNamesCircutorCVM1D’ defined but not used [-Wunused-variable]
+   37 | static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus.c:33:12: warning: ‘RegistersCircutorCVM1D’ defined but not used [-Wunused-variable]
+   33 | static int RegistersCircutorCVM1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Modbus.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:35:9: warning: unused variable ‘error’ [-Wunused-variable]
+   35 |     int error = 0;
+      |         ^~~~~
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.o ./src/TestARM.o   
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.7.2:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+13:12:49 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:35:9: warning: unused variable ‘error’ [-Wunused-variable]
+   35 |     int error = 0;
+      |         ^~~~~
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/Serial.o ./src/TestARM.o   
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.7.2:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 

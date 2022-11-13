@@ -22,8 +22,7 @@
 #include <string.h>
 #include "Serial.h"
 #include "Modbus.h"
-
-
+#include "Modbus_Circutor_CVM_1D_Registers.h"
 
 
 
@@ -47,7 +46,7 @@ int main (int argc, char *argv[])
         return 1;
     }
 
-    ReadAddress(fd, 0, 0, 1);
+    ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[1], 1);
     closeserial(fd);
     return 0;
 }

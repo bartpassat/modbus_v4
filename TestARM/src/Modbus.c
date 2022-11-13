@@ -106,7 +106,7 @@ void ReadAddress(int l_fd, unsigned char l_slaveaddress, unsigned int l_address,
 	l_modbusframe[0] = l_slaveaddress;	// Modbus slave address
 	l_modbusframe[1] = 0x04;			// Function code
 	l_modbusframe[2] = 0x00;	// Hi byte of register
-	l_modbusframe[3] = 0x00;		// lo byte of register
+	l_modbusframe[3] = l_address;		// lo byte of register
 	l_modbusframe[4] = 0x00;
 	l_modbusframe[5] = 0x02;				// All registers we need are 16-bit
 
