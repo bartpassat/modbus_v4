@@ -56,7 +56,7 @@ main-build: TestARM
 TestARM: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
-	arm-linux-gnueabihf-g++  -o "TestARM" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-linux-gnueabihf-g++  -o "TestARM" $(OBJS) $(USER_OBJS) $(LIBS) -lpthread -ldl
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -66,7 +66,7 @@ clean:
 	-@echo ' '
 
 post-build:
-	-scp TestARM debian@192.168.7.2:/home/debian/BBBTest
+	-scp TestARM debian@192.168.1.251:/home/debian/BBBTest
 	-@echo ' '
 
 .PHONY: all clean dependents main-build post-build
