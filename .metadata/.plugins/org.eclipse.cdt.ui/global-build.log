@@ -3947,3 +3947,67 @@ Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
 default username:password is [debian:temppwd]
 
  
+11:13:03 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+11:13:24 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
