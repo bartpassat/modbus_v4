@@ -2740,3 +2740,1210 @@ Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
 default username:password is [debian:temppwd]
 
  
+13:08:10 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+13:10:38 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+19:42:42 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+20:50:38 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+20:57:38 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:00:14 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:00:47 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:01:15 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:06:28 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:10:13 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+scp: /home/debian/BBBTest: Text file busy
+make[1]: [makefile:69: post-build] Fout 1 (genegeerd)
+ 
+21:10:25 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:10:47 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:32:47 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:35:08 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+21:38:19 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/MQTTClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTClient.d" -MT"src/MQTTClient.o" -o "src/MQTTClient.o" "../src/MQTTClient.c"
+../src/MQTTClient.c:73:2: error: #else without #if
+   73 | #else
+      |  ^~~~
+../src/MQTTClient.c:76:2: error: #endif without #if
+   76 | #endif
+      |  ^~~~~
+../src/MQTTClient.c: In function ‘MQTTClient_global_init’:
+../src/MQTTClient.c:98:2: warning: implicit declaration of function ‘SSLSocket_handleOpensslInit’ [-Wimplicit-function-declaration]
+   98 |  SSLSocket_handleOpensslInit(inits->do_openssl_init);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/MQTTClient.c: In function ‘MQTTClient_createWithOptions’:
+../src/MQTTClient.c:441:3: warning: implicit declaration of function ‘SSLSocket_initialize’; did you mean ‘Log_initialize’? [-Wimplicit-function-declaration]
+  441 |   SSLSocket_initialize();
+      |   ^~~~~~~~~~~~~~~~~~~~
+      |   Log_initialize
+../src/MQTTClient.c: In function ‘MQTTClient_run’:
+../src/MQTTClient.c:978:14: error: ‘Clients’ has no member named ‘sslopts’
+  978 |     rc = m->c->sslopts->struct_version >= 3 ?
+      |              ^~
+../src/MQTTClient.c:979:6: warning: implicit declaration of function ‘SSLSocket_connect’; did you mean ‘WebSocket_connect’? [-Wimplicit-function-declaration]
+  979 |      SSLSocket_connect(m->c->net.ssl, m->c->net.socket, m->serverURI,
+      |      ^~~~~~~~~~~~~~~~~
+      |      WebSocket_connect
+../src/MQTTClient.c:979:33: error: ‘networkHandles’ has no member named ‘ssl’
+  979 |      SSLSocket_connect(m->c->net.ssl, m->c->net.socket, m->serverURI,
+      |                                 ^
+../src/MQTTClient.c:980:11: error: ‘Clients’ has no member named ‘sslopts’
+  980 |       m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |           ^~
+../src/MQTTClient.c:980:34: error: ‘Clients’ has no member named ‘sslopts’
+  980 |       m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |                                  ^~
+../src/MQTTClient.c:980:63: error: ‘Clients’ has no member named ‘sslopts’
+  980 |       m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |                                                               ^~
+../src/MQTTClient.c:981:33: error: ‘networkHandles’ has no member named ‘ssl’
+  981 |      SSLSocket_connect(m->c->net.ssl, m->c->net.socket, m->serverURI,
+      |                                 ^
+../src/MQTTClient.c:982:11: error: ‘Clients’ has no member named ‘sslopts’
+  982 |       m->c->sslopts->verify, NULL, NULL);
+      |           ^~
+../src/MQTTClient.c:985:79: error: ‘Clients’ has no member named ‘session’
+  985 |      if (rc == 1 && (m->c->cleansession == 0 && m->c->cleanstart == 0) && m->c->session == NULL)
+      |                                                                               ^~
+../src/MQTTClient.c:986:11: error: ‘Clients’ has no member named ‘session’
+  986 |       m->c->session = SSL_get1_session(m->c->net.ssl);
+      |           ^~
+../src/MQTTClient.c:986:49: error: ‘networkHandles’ has no member named ‘ssl’
+  986 |       m->c->session = SSL_get1_session(m->c->net.ssl);
+      |                                                 ^
+../src/MQTTClient.c: In function ‘MQTTClient_closeSession’:
+../src/MQTTClient.c:1099:26: error: ‘Clients’ has no member named ‘session’
+ 1099 |   SSL_SESSION_free(client->session); /* is a no-op if session is NULL */
+      |                          ^~
+../src/MQTTClient.c:1100:9: error: ‘Clients’ has no member named ‘session’
+ 1100 |   client->session = NULL; /* show the session has been freed */
+      |         ^~
+../src/MQTTClient.c:1101:3: warning: implicit declaration of function ‘SSLSocket_close’; did you mean ‘WebSocket_close’? [-Wimplicit-function-declaration]
+ 1101 |   SSLSocket_close(&client->net);
+      |   ^~~~~~~~~~~~~~~
+      |   WebSocket_close
+../src/MQTTClient.c:1107:14: error: ‘networkHandles’ has no member named ‘ssl’
+ 1107 |   client->net.ssl = NULL;
+      |              ^
+../src/MQTTClient.c: In function ‘MQTTClient_connectURIVersion’:
+../src/MQTTClient.c:1230:67: warning: passing argument 5 of ‘MQTTProtocol_connect’ makes pointer from integer without a cast [-Wint-conversion]
+ 1230 |  rc = MQTTProtocol_connect(serverURI, m->c, m->ssl, m->websocket, MQTTVersion, connectProperties, willProperties,
+      |                                                                   ^~~~~~~~~~~
+      |                                                                   |
+      |                                                                   int
+In file included from ../src/MQTTProtocol.h:44,
+                 from ../src/MQTTClient.c:63:
+../src/MQTTProtocolOut.h:52:19: note: expected ‘MQTTProperties *’ but argument is of type ‘int’
+   52 |   MQTTProperties* connectProperties, MQTTProperties* willProperties, long timeout);
+      |   ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+../src/MQTTClient.c:1230:99: warning: passing argument 7 of ‘MQTTProtocol_connect’ makes integer from pointer without a cast [-Wint-conversion]
+ 1230 |  rc = MQTTProtocol_connect(serverURI, m->c, m->ssl, m->websocket, MQTTVersion, connectProperties, willProperties,
+      |                                                                                                   ^~~~~~~~~~~~~~
+      |                                                                                                   |
+      |                                                                                                   MQTTProperties *
+In file included from ../src/MQTTProtocol.h:44,
+                 from ../src/MQTTClient.c:63:
+../src/MQTTProtocolOut.h:52:75: note: expected ‘long int’ but argument is of type ‘MQTTProperties *’
+   52 |   MQTTProperties* connectProperties, MQTTProperties* willProperties, long timeout);
+      |                                                                      ~~~~~^~~~~~~
+../src/MQTTClient.c:1230:7: error: too many arguments to function ‘MQTTProtocol_connect’
+ 1230 |  rc = MQTTProtocol_connect(serverURI, m->c, m->ssl, m->websocket, MQTTVersion, connectProperties, willProperties,
+      |       ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/MQTTProtocol.h:44,
+                 from ../src/MQTTClient.c:63:
+../src/MQTTProtocolOut.h:51:5: note: declared here
+   51 | int MQTTProtocol_connect(const char* ip_address, Clients* acClients, int websocket, int MQTTVersion,
+      |     ^~~~~~~~~~~~~~~~~~~~
+../src/MQTTClient.c:1270:18: error: ‘networkHandles’ has no member named ‘https_proxy’; did you mean ‘http_proxy’?
+ 1270 |    if (m->c->net.https_proxy) {
+      |                  ^~~~~~~~~~~
+      |                  http_proxy
+../src/MQTTClient.c:1277:24: warning: implicit declaration of function ‘SSLSocket_setSocketForSSL’ [-Wimplicit-function-declaration]
+ 1277 |    setSocketForSSLrc = SSLSocket_setSocketForSSL(&m->c->net, m->c->sslopts,
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/MQTTClient.c:1277:66: error: ‘Clients’ has no member named ‘sslopts’
+ 1277 |    setSocketForSSLrc = SSLSocket_setSocketForSSL(&m->c->net, m->c->sslopts,
+      |                                                                  ^~
+../src/MQTTClient.c:1282:13: error: ‘Clients’ has no member named ‘session’
+ 1282 |     if (m->c->session != NULL)
+      |             ^~
+../src/MQTTClient.c:1283:41: error: ‘networkHandles’ has no member named ‘ssl’
+ 1283 |      if ((rc = SSL_set_session(m->c->net.ssl, m->c->session)) != 1)
+      |                                         ^
+../src/MQTTClient.c:1283:51: error: ‘Clients’ has no member named ‘session’
+ 1283 |      if ((rc = SSL_set_session(m->c->net.ssl, m->c->session)) != 1)
+      |                                                   ^~
+../src/MQTTClient.c:1285:14: error: ‘Clients’ has no member named ‘sslopts’
+ 1285 |     rc = m->c->sslopts->struct_version >= 3 ?
+      |              ^~
+../src/MQTTClient.c:1286:33: error: ‘networkHandles’ has no member named ‘ssl’
+ 1286 |      SSLSocket_connect(m->c->net.ssl, m->c->net.socket, serverURI,
+      |                                 ^
+../src/MQTTClient.c:1287:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1287 |       m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |           ^~
+../src/MQTTClient.c:1287:34: error: ‘Clients’ has no member named ‘sslopts’
+ 1287 |       m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |                                  ^~
+../src/MQTTClient.c:1287:63: error: ‘Clients’ has no member named ‘sslopts’
+ 1287 |       m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |                                                               ^~
+../src/MQTTClient.c:1288:33: error: ‘networkHandles’ has no member named ‘ssl’
+ 1288 |      SSLSocket_connect(m->c->net.ssl, m->c->net.socket, serverURI,
+      |                                 ^
+../src/MQTTClient.c:1289:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1289 |       m->c->sslopts->verify, NULL, NULL);
+      |           ^~
+../src/MQTTClient.c:1315:69: error: ‘Clients’ has no member named ‘session’
+ 1315 |       if ((m->c->cleansession == 0 && m->c->cleanstart == 0) && m->c->session == NULL)
+      |                                                                     ^~
+../src/MQTTClient.c:1316:12: error: ‘Clients’ has no member named ‘session’
+ 1316 |        m->c->session = SSL_get1_session(m->c->net.ssl);
+      |            ^~
+../src/MQTTClient.c:1316:50: error: ‘networkHandles’ has no member named ‘ssl’
+ 1316 |        m->c->session = SSL_get1_session(m->c->net.ssl);
+      |                                                  ^
+../src/MQTTClient.c:1367:64: error: ‘Clients’ has no member named ‘session’
+ 1367 |   if((m->c->cleansession == 0 && m->c->cleanstart == 0) && m->c->session == NULL)
+      |                                                                ^~
+../src/MQTTClient.c:1368:8: error: ‘Clients’ has no member named ‘session’
+ 1368 |    m->c->session = SSL_get1_session(m->c->net.ssl);
+      |        ^~
+../src/MQTTClient.c:1368:46: error: ‘networkHandles’ has no member named ‘ssl’
+ 1368 |    m->c->session = SSL_get1_session(m->c->net.ssl);
+      |                                              ^
+../src/MQTTClient.c: In function ‘MQTTClient_connectURI’:
+../src/MQTTClient.c:1578:10: error: ‘Clients’ has no member named ‘sslopts’
+ 1578 |  if (m->c->sslopts)
+      |          ^~
+../src/MQTTClient.c:1580:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1580 |   if (m->c->sslopts->trustStore)
+      |           ^~
+In file included from ../src/MQTTClient.c:68:
+../src/MQTTClient.c:1581:20: error: ‘Clients’ has no member named ‘sslopts’
+ 1581 |    free((void*)m->c->sslopts->trustStore);
+      |                    ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1582:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1582 |   if (m->c->sslopts->keyStore)
+      |           ^~
+In file included from ../src/MQTTClient.c:68:
+../src/MQTTClient.c:1583:20: error: ‘Clients’ has no member named ‘sslopts’
+ 1583 |    free((void*)m->c->sslopts->keyStore);
+      |                    ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1584:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1584 |   if (m->c->sslopts->privateKey)
+      |           ^~
+In file included from ../src/MQTTClient.c:68:
+../src/MQTTClient.c:1585:20: error: ‘Clients’ has no member named ‘sslopts’
+ 1585 |    free((void*)m->c->sslopts->privateKey);
+      |                    ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1586:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1586 |   if (m->c->sslopts->privateKeyPassword)
+      |           ^~
+In file included from ../src/MQTTClient.c:68:
+../src/MQTTClient.c:1587:20: error: ‘Clients’ has no member named ‘sslopts’
+ 1587 |    free((void*)m->c->sslopts->privateKeyPassword);
+      |                    ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1588:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1588 |   if (m->c->sslopts->enabledCipherSuites)
+      |           ^~
+In file included from ../src/MQTTClient.c:68:
+../src/MQTTClient.c:1589:20: error: ‘Clients’ has no member named ‘sslopts’
+ 1589 |    free((void*)m->c->sslopts->enabledCipherSuites);
+      |                    ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1590:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1590 |   if (m->c->sslopts->struct_version >= 2)
+      |           ^~
+../src/MQTTClient.c:1592:12: error: ‘Clients’ has no member named ‘sslopts’
+ 1592 |    if (m->c->sslopts->CApath)
+      |            ^~
+In file included from ../src/MQTTClient.c:68:
+../src/MQTTClient.c:1593:21: error: ‘Clients’ has no member named ‘sslopts’
+ 1593 |     free((void*)m->c->sslopts->CApath);
+      |                     ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1595:12: error: ‘Clients’ has no member named ‘sslopts’
+ 1595 |   free(m->c->sslopts);
+      |            ^~
+../src/Heap.h:55:44: note: in definition of macro ‘free’
+   55 | #define free(x) myfree(__FILE__, __LINE__, x)
+      |                                            ^
+../src/MQTTClient.c:1596:7: error: ‘Clients’ has no member named ‘sslopts’
+ 1596 |   m->c->sslopts = NULL;
+      |       ^~
+../src/MQTTClient.c:1601:12: error: ‘Clients’ has no member named ‘sslopts’
+ 1601 |   if ((m->c->sslopts = malloc(sizeof(MQTTClient_SSLOptions))) == NULL)
+      |            ^~
+../src/MQTTClient.c:1606:14: error: ‘Clients’ has no member named ‘sslopts’
+ 1606 |   memset(m->c->sslopts, '\0', sizeof(MQTTClient_SSLOptions));
+      |              ^~
+../src/MQTTClient.c:1607:7: error: ‘Clients’ has no member named ‘sslopts’
+ 1607 |   m->c->sslopts->struct_version = options->ssl->struct_version;
+      |       ^~
+../src/MQTTClient.c:1609:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1609 |    m->c->sslopts->trustStore = MQTTStrdup(options->ssl->trustStore);
+      |        ^~
+../src/MQTTClient.c:1611:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1611 |    m->c->sslopts->keyStore = MQTTStrdup(options->ssl->keyStore);
+      |        ^~
+../src/MQTTClient.c:1613:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1613 |    m->c->sslopts->privateKey = MQTTStrdup(options->ssl->privateKey);
+      |        ^~
+../src/MQTTClient.c:1615:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1615 |    m->c->sslopts->privateKeyPassword = MQTTStrdup(options->ssl->privateKeyPassword);
+      |        ^~
+../src/MQTTClient.c:1617:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1617 |    m->c->sslopts->enabledCipherSuites = MQTTStrdup(options->ssl->enabledCipherSuites);
+      |        ^~
+../src/MQTTClient.c:1618:7: error: ‘Clients’ has no member named ‘sslopts’
+ 1618 |   m->c->sslopts->enableServerCertAuth = options->ssl->enableServerCertAuth;
+      |       ^~
+../src/MQTTClient.c:1619:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1619 |   if (m->c->sslopts->struct_version >= 1)
+      |           ^~
+../src/MQTTClient.c:1620:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1620 |    m->c->sslopts->sslVersion = options->ssl->sslVersion;
+      |        ^~
+../src/MQTTClient.c:1621:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1621 |   if (m->c->sslopts->struct_version >= 2)
+      |           ^~
+../src/MQTTClient.c:1623:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1623 |    m->c->sslopts->verify = options->ssl->verify;
+      |        ^~
+../src/MQTTClient.c:1625:9: error: ‘Clients’ has no member named ‘sslopts’
+ 1625 |     m->c->sslopts->CApath = MQTTStrdup(options->ssl->CApath);
+      |         ^~
+../src/MQTTClient.c:1627:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1627 |   if (m->c->sslopts->struct_version >= 3)
+      |           ^~
+../src/MQTTClient.c:1629:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1629 |    m->c->sslopts->ssl_error_cb = options->ssl->ssl_error_cb;
+      |        ^~
+../src/MQTTClient.c:1630:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1630 |    m->c->sslopts->ssl_error_context = options->ssl->ssl_error_context;
+      |        ^~
+../src/MQTTClient.c:1632:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1632 |   if (m->c->sslopts->struct_version >= 4)
+      |           ^~
+../src/MQTTClient.c:1634:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1634 |    m->c->sslopts->ssl_psk_cb = options->ssl->ssl_psk_cb;
+      |        ^~
+../src/MQTTClient.c:1635:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1635 |    m->c->sslopts->ssl_psk_context = options->ssl->ssl_psk_context;
+      |        ^~
+../src/MQTTClient.c:1636:8: error: ‘Clients’ has no member named ‘sslopts’
+ 1636 |    m->c->sslopts->disableDefaultTrustStore = options->ssl->disableDefaultTrustStore;
+      |        ^~
+../src/MQTTClient.c:1638:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1638 |   if (m->c->sslopts->struct_version >= 5)
+      |           ^~
+../src/MQTTClient.c:1640:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1640 |       m->c->sslopts->protos = options->ssl->protos;
+      |           ^~
+../src/MQTTClient.c:1641:11: error: ‘Clients’ has no member named ‘sslopts’
+ 1641 |       m->c->sslopts->protos_len = options->ssl->protos_len;
+      |           ^~
+../src/MQTTClient.c: In function ‘MQTTClient_cycle’:
+../src/MQTTClient.c:2554:15: warning: implicit declaration of function ‘SSLSocket_getPendingRead’ [-Wimplicit-function-declaration]
+ 2554 |  if ((*sock = SSLSocket_getPendingRead()) == -1)
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/MQTTClient.c: In function ‘MQTTClient_waitfor’:
+../src/MQTTClient.c:2702:16: error: ‘Clients’ has no member named ‘sslopts’
+ 2702 |      *rc = m->c->sslopts->struct_version >= 3 ?
+      |                ^~
+../src/MQTTClient.c:2703:34: error: ‘networkHandles’ has no member named ‘ssl’
+ 2703 |       SSLSocket_connect(m->c->net.ssl, sock, m->currentServerURI,
+      |                                  ^
+../src/MQTTClient.c:2704:12: error: ‘Clients’ has no member named ‘sslopts’
+ 2704 |        m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |            ^~
+../src/MQTTClient.c:2704:35: error: ‘Clients’ has no member named ‘sslopts’
+ 2704 |        m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |                                   ^~
+../src/MQTTClient.c:2704:64: error: ‘Clients’ has no member named ‘sslopts’
+ 2704 |        m->c->sslopts->verify, m->c->sslopts->ssl_error_cb, m->c->sslopts->ssl_error_context) :
+      |                                                                ^~
+../src/MQTTClient.c:2705:34: error: ‘networkHandles’ has no member named ‘ssl’
+ 2705 |       SSLSocket_connect(m->c->net.ssl, sock, m->currentServerURI,
+      |                                  ^
+../src/MQTTClient.c:2706:12: error: ‘Clients’ has no member named ‘sslopts’
+ 2706 |        m->c->sslopts->verify, NULL, NULL);
+      |            ^~
+../src/MQTTClient.c:2711:69: error: ‘Clients’ has no member named ‘session’
+ 2711 |       if ((m->c->cleansession == 0 && m->c->cleanstart == 0) && m->c->session == NULL)
+      |                                                                     ^~
+../src/MQTTClient.c:2712:12: error: ‘Clients’ has no member named ‘session’
+ 2712 |        m->c->session = SSL_get1_session(m->c->net.ssl);
+      |            ^~
+../src/MQTTClient.c:2712:50: error: ‘networkHandles’ has no member named ‘ssl’
+ 2712 |        m->c->session = SSL_get1_session(m->c->net.ssl);
+      |                                                  ^
+make[1]: *** [src/subdir.mk:110: src/MQTTClient.o] Fout 1
+make: *** [makefile:50: all] Fout 2
+"make all" terminated with exit code 2. Build might be incomplete.
+21:41:09 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/MQTTClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTClient.d" -MT"src/MQTTClient.o" -o "src/MQTTClient.o" "../src/MQTTClient.c"
+Finished building: ../src/MQTTClient.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+10:50:23 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Base64.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Base64.d" -MT"src/Base64.o" -o "src/Base64.o" "../src/Base64.c"
+Finished building: ../src/Base64.c
+ 
+Building file: ../src/Clients.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clients.d" -MT"src/Clients.o" -o "src/Clients.o" "../src/Clients.c"
+Finished building: ../src/Clients.c
+ 
+Building file: ../src/Heap.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Heap.d" -MT"src/Heap.o" -o "src/Heap.o" "../src/Heap.c"
+Finished building: ../src/Heap.c
+ 
+Building file: ../src/LinkedList.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/Log.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Log.d" -MT"src/Log.o" -o "src/Log.o" "../src/Log.c"
+Finished building: ../src/Log.c
+ 
+Building file: ../src/MQTTClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTClient.d" -MT"src/MQTTClient.o" -o "src/MQTTClient.o" "../src/MQTTClient.c"
+Finished building: ../src/MQTTClient.c
+ 
+Building file: ../src/MQTTPacket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPacket.d" -MT"src/MQTTPacket.o" -o "src/MQTTPacket.o" "../src/MQTTPacket.c"
+Finished building: ../src/MQTTPacket.c
+ 
+Building file: ../src/MQTTPacketOut.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPacketOut.d" -MT"src/MQTTPacketOut.o" -o "src/MQTTPacketOut.o" "../src/MQTTPacketOut.c"
+Finished building: ../src/MQTTPacketOut.c
+ 
+Building file: ../src/MQTTPersistence.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPersistence.d" -MT"src/MQTTPersistence.o" -o "src/MQTTPersistence.o" "../src/MQTTPersistence.c"
+Finished building: ../src/MQTTPersistence.c
+ 
+Building file: ../src/MQTTPersistenceDefault.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPersistenceDefault.d" -MT"src/MQTTPersistenceDefault.o" -o "src/MQTTPersistenceDefault.o" "../src/MQTTPersistenceDefault.c"
+Finished building: ../src/MQTTPersistenceDefault.c
+ 
+Building file: ../src/MQTTProperties.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTProperties.d" -MT"src/MQTTProperties.o" -o "src/MQTTProperties.o" "../src/MQTTProperties.c"
+Finished building: ../src/MQTTProperties.c
+ 
+Building file: ../src/MQTTProtocolClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTProtocolClient.d" -MT"src/MQTTProtocolClient.o" -o "src/MQTTProtocolClient.o" "../src/MQTTProtocolClient.c"
+Finished building: ../src/MQTTProtocolClient.c
+ 
+Building file: ../src/MQTTProtocolOut.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTProtocolOut.d" -MT"src/MQTTProtocolOut.o" -o "src/MQTTProtocolOut.o" "../src/MQTTProtocolOut.c"
+Finished building: ../src/MQTTProtocolOut.c
+ 
+Building file: ../src/MQTTReasonCodes.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTReasonCodes.d" -MT"src/MQTTReasonCodes.o" -o "src/MQTTReasonCodes.o" "../src/MQTTReasonCodes.c"
+Finished building: ../src/MQTTReasonCodes.c
+ 
+Building file: ../src/MQTTTime.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTTime.d" -MT"src/MQTTTime.o" -o "src/MQTTTime.o" "../src/MQTTTime.c"
+Finished building: ../src/MQTTTime.c
+ 
+Building file: ../src/Messages.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Messages.d" -MT"src/Messages.o" -o "src/Messages.o" "../src/Messages.c"
+Finished building: ../src/Messages.c
+ 
+Building file: ../src/Modbus.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus.d" -MT"src/Modbus.o" -o "src/Modbus.o" "../src/Modbus.c"
+../src/Modbus.c:37:17: warning: ‘RegisterNamesCircutorCVM1D’ defined but not used [-Wunused-variable]
+   37 | static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus.c:33:12: warning: ‘RegistersCircutorCVM1D’ defined but not used [-Wunused-variable]
+   33 | static int RegistersCircutorCVM1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Modbus.c
+ 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/OsWrapper.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OsWrapper.d" -MT"src/OsWrapper.o" -o "src/OsWrapper.o" "../src/OsWrapper.c"
+Finished building: ../src/OsWrapper.c
+ 
+Building file: ../src/Proxy.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Proxy.d" -MT"src/Proxy.o" -o "src/Proxy.o" "../src/Proxy.c"
+Finished building: ../src/Proxy.c
+ 
+Building file: ../src/SHA1.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SHA1.d" -MT"src/SHA1.o" -o "src/SHA1.o" "../src/SHA1.c"
+Finished building: ../src/SHA1.c
+ 
+Building file: ../src/SSLSocket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SSLSocket.d" -MT"src/SSLSocket.o" -o "src/SSLSocket.o" "../src/SSLSocket.c"
+Finished building: ../src/SSLSocket.c
+ 
+Building file: ../src/Serial.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -o "src/Serial.o" "../src/Serial.c"
+Finished building: ../src/Serial.c
+ 
+Building file: ../src/Socket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Socket.d" -MT"src/Socket.o" -o "src/Socket.o" "../src/Socket.c"
+Finished building: ../src/Socket.c
+ 
+Building file: ../src/SocketBuffer.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SocketBuffer.d" -MT"src/SocketBuffer.o" -o "src/SocketBuffer.o" "../src/SocketBuffer.c"
+Finished building: ../src/SocketBuffer.c
+ 
+Building file: ../src/StackTrace.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StackTrace.d" -MT"src/StackTrace.o" -o "src/StackTrace.o" "../src/StackTrace.c"
+Finished building: ../src/StackTrace.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building file: ../src/Thread.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Thread.d" -MT"src/Thread.o" -o "src/Thread.o" "../src/Thread.c"
+Finished building: ../src/Thread.c
+ 
+Building file: ../src/Tree.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tree.d" -MT"src/Tree.o" -o "src/Tree.o" "../src/Tree.c"
+Finished building: ../src/Tree.c
+ 
+Building file: ../src/WebSocket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/WebSocket.d" -MT"src/WebSocket.o" -o "src/WebSocket.o" "../src/WebSocket.c"
+Finished building: ../src/WebSocket.c
+ 
+Building file: ../src/utf-8.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/include -I/home/bart/beaglbone-projects/modbus_v4_paho/openssl/ssl -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utf-8.d" -MT"src/utf-8.o" -o "src/utf-8.o" "../src/utf-8.c"
+Finished building: ../src/utf-8.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl -lssl
+/usr/lib/gcc-cross/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/bin/ld: cannot find -lssl
+collect2: error: ld returned 1 exit status
+make[1]: *** [makefile:59: TestARM] Fout 1
+make: *** [makefile:50: all] Fout 2
+"make all" terminated with exit code 2. Build might be incomplete.
+10:51:13 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -llssl -ldl -lssl
+/usr/lib/gcc-cross/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/bin/ld: cannot find -llssl
+/usr/lib/gcc-cross/arm-linux-gnueabihf/10/../../../../arm-linux-gnueabihf/bin/ld: cannot find -lssl
+collect2: error: ld returned 1 exit status
+make[1]: *** [makefile:59: TestARM] Fout 1
+make: *** [makefile:50: all] Fout 2
+"make all" terminated with exit code 2. Build might be incomplete.
+10:54:05 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Base64.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Base64.d" -MT"src/Base64.o" -o "src/Base64.o" "../src/Base64.c"
+Finished building: ../src/Base64.c
+ 
+Building file: ../src/Clients.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Clients.d" -MT"src/Clients.o" -o "src/Clients.o" "../src/Clients.c"
+Finished building: ../src/Clients.c
+ 
+Building file: ../src/Heap.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Heap.d" -MT"src/Heap.o" -o "src/Heap.o" "../src/Heap.c"
+Finished building: ../src/Heap.c
+ 
+Building file: ../src/LinkedList.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/Log.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Log.d" -MT"src/Log.o" -o "src/Log.o" "../src/Log.c"
+Finished building: ../src/Log.c
+ 
+Building file: ../src/MQTTClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTClient.d" -MT"src/MQTTClient.o" -o "src/MQTTClient.o" "../src/MQTTClient.c"
+Finished building: ../src/MQTTClient.c
+ 
+Building file: ../src/MQTTPacket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPacket.d" -MT"src/MQTTPacket.o" -o "src/MQTTPacket.o" "../src/MQTTPacket.c"
+Finished building: ../src/MQTTPacket.c
+ 
+Building file: ../src/MQTTPacketOut.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPacketOut.d" -MT"src/MQTTPacketOut.o" -o "src/MQTTPacketOut.o" "../src/MQTTPacketOut.c"
+Finished building: ../src/MQTTPacketOut.c
+ 
+Building file: ../src/MQTTPersistence.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPersistence.d" -MT"src/MQTTPersistence.o" -o "src/MQTTPersistence.o" "../src/MQTTPersistence.c"
+Finished building: ../src/MQTTPersistence.c
+ 
+Building file: ../src/MQTTPersistenceDefault.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTPersistenceDefault.d" -MT"src/MQTTPersistenceDefault.o" -o "src/MQTTPersistenceDefault.o" "../src/MQTTPersistenceDefault.c"
+Finished building: ../src/MQTTPersistenceDefault.c
+ 
+Building file: ../src/MQTTProperties.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTProperties.d" -MT"src/MQTTProperties.o" -o "src/MQTTProperties.o" "../src/MQTTProperties.c"
+Finished building: ../src/MQTTProperties.c
+ 
+Building file: ../src/MQTTProtocolClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTProtocolClient.d" -MT"src/MQTTProtocolClient.o" -o "src/MQTTProtocolClient.o" "../src/MQTTProtocolClient.c"
+Finished building: ../src/MQTTProtocolClient.c
+ 
+Building file: ../src/MQTTProtocolOut.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTProtocolOut.d" -MT"src/MQTTProtocolOut.o" -o "src/MQTTProtocolOut.o" "../src/MQTTProtocolOut.c"
+Finished building: ../src/MQTTProtocolOut.c
+ 
+Building file: ../src/MQTTReasonCodes.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTReasonCodes.d" -MT"src/MQTTReasonCodes.o" -o "src/MQTTReasonCodes.o" "../src/MQTTReasonCodes.c"
+Finished building: ../src/MQTTReasonCodes.c
+ 
+Building file: ../src/MQTTTime.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTTime.d" -MT"src/MQTTTime.o" -o "src/MQTTTime.o" "../src/MQTTTime.c"
+Finished building: ../src/MQTTTime.c
+ 
+Building file: ../src/Messages.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Messages.d" -MT"src/Messages.o" -o "src/Messages.o" "../src/Messages.c"
+Finished building: ../src/Messages.c
+ 
+Building file: ../src/Modbus.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus.d" -MT"src/Modbus.o" -o "src/Modbus.o" "../src/Modbus.c"
+../src/Modbus.c:37:17: warning: ‘RegisterNamesCircutorCVM1D’ defined but not used [-Wunused-variable]
+   37 | static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus.c:33:12: warning: ‘RegistersCircutorCVM1D’ defined but not used [-Wunused-variable]
+   33 | static int RegistersCircutorCVM1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Modbus.c
+ 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/OsWrapper.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OsWrapper.d" -MT"src/OsWrapper.o" -o "src/OsWrapper.o" "../src/OsWrapper.c"
+Finished building: ../src/OsWrapper.c
+ 
+Building file: ../src/Proxy.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Proxy.d" -MT"src/Proxy.o" -o "src/Proxy.o" "../src/Proxy.c"
+Finished building: ../src/Proxy.c
+ 
+Building file: ../src/SHA1.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SHA1.d" -MT"src/SHA1.o" -o "src/SHA1.o" "../src/SHA1.c"
+Finished building: ../src/SHA1.c
+ 
+Building file: ../src/SSLSocket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SSLSocket.d" -MT"src/SSLSocket.o" -o "src/SSLSocket.o" "../src/SSLSocket.c"
+Finished building: ../src/SSLSocket.c
+ 
+Building file: ../src/Serial.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Serial.d" -MT"src/Serial.o" -o "src/Serial.o" "../src/Serial.c"
+Finished building: ../src/Serial.c
+ 
+Building file: ../src/Socket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Socket.d" -MT"src/Socket.o" -o "src/Socket.o" "../src/Socket.c"
+Finished building: ../src/Socket.c
+ 
+Building file: ../src/SocketBuffer.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SocketBuffer.d" -MT"src/SocketBuffer.o" -o "src/SocketBuffer.o" "../src/SocketBuffer.c"
+Finished building: ../src/SocketBuffer.c
+ 
+Building file: ../src/StackTrace.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StackTrace.d" -MT"src/StackTrace.o" -o "src/StackTrace.o" "../src/StackTrace.c"
+Finished building: ../src/StackTrace.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building file: ../src/Thread.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Thread.d" -MT"src/Thread.o" -o "src/Thread.o" "../src/Thread.c"
+Finished building: ../src/Thread.c
+ 
+Building file: ../src/Tree.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Tree.d" -MT"src/Tree.o" -o "src/Tree.o" "../src/Tree.c"
+Finished building: ../src/Tree.c
+ 
+Building file: ../src/WebSocket.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/WebSocket.d" -MT"src/WebSocket.o" -o "src/WebSocket.o" "../src/WebSocket.c"
+Finished building: ../src/WebSocket.c
+ 
+Building file: ../src/utf-8.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utf-8.d" -MT"src/utf-8.o" -o "src/utf-8.o" "../src/utf-8.c"
+Finished building: ../src/utf-8.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+11:26:54 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/MQTTClient.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/MQTTClient.d" -MT"src/MQTTClient.o" -o "src/MQTTClient.o" "../src/MQTTClient.c"
+Finished building: ../src/MQTTClient.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+10:52:08 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+10:53:34 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+10:56:03 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+10:58:02 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+In file included from ../src/TestARM.c:25:
+../src/Modbus_Circutor_CVM_1D_Registers.h:31:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   31 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:14:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   14 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 

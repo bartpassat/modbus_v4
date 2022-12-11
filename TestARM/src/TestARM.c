@@ -28,10 +28,10 @@
 #include <string.h>
 #include "MQTTClient.h"
 
-#define ADDRESS     "tcp://mqtt.eclipseprojects.io:1883"
+#define ADDRESS     "tcp://test.mosquitto.org"
 #define CLIENTID    "ExampleClientPub"
-#define TOPIC       "MQTT Examples"
-#define PAYLOAD     "Hello World!"
+#define TOPIC       "ProjectenVoorHetWerkveld/Beaglebone/test"
+#define PAYLOAD     "Hello, straight from beaglebone!"
 #define QOS         1
 #define TIMEOUT     10000L
 
@@ -44,9 +44,21 @@ int main (int argc, char *argv[])
 {
     MQTTClient client;
     MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
+    //MQTTClient_SSLOptions ssl_opts = MQTTClient_SSLOptions_initializer;
     MQTTClient_message pubmsg = MQTTClient_message_initializer;
     MQTTClient_deliveryToken token;
     int rc;
+
+/*    conn_opts.ssl = &ssl_opts;
+    ssl_opts.enableServerCertAuth = 0;
+    ssl_opts.verify = 1;
+    ssl_opts.CApath = NULL;
+    ssl_opts.keyStore = NULL;
+    ssl_opts.trustStore = NULL;
+    ssl_opts.privateKey = NULL;
+    ssl_opts.privateKeyPassword = NULL;
+    ssl_opts.enabledCipherSuites = NULL;
+*/
 
 #ifdef ENABLEMODBUS
     int fd;
@@ -78,6 +90,15 @@ int main (int argc, char *argv[])
 
     conn_opts.keepAliveInterval = 20;
     conn_opts.cleansession = 1;
+
+//    conn_opts.username = "Barrie";
+//    conn_opts.password = "yNzjz4En";
+
+
+
+
+
+
     if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS)
     {
         printf("Failed to connect, return code %d\n", rc);

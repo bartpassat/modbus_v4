@@ -20,4 +20,6 @@
 			<item value="/home/bart/git/paho.mqtt.c/src"/>
 		</list>
 	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
 </section>
