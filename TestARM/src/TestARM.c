@@ -28,31 +28,40 @@
 #include <string.h>
 #include "MQTTClient.h"
 
-#define ADDRESS     "tcp://test.mosquitto.org"
-#define CLIENTID    "ExampleClientPub"
+#define ADDRESS     "tcp://test.mosquitto.org:1883"
+#define CLIENTID    "ExampleClientPub2"
 #define TOPIC       "ProjectenVoorHetWerkveld/Beaglebone/test"
 #define PAYLOAD     "Beaglebone say Hello!"
 #define QOS         1
 #define TIMEOUT     10000L
 
-//#define ENABLEMODBUS
-#define ENABLEMQTT
+//defines for reading the energy meter
+#define VOLTAGE				0
+#define	VOLTAGEMAX			1
+#define VOLTAGEMIN			2
+#define CURRENT				3
+#define CURRENTMAX			4
+#define CURRENTMIN			5
+#define ACTIVEPOWER			6
+#define ACTIVEPOWERMAX		7
+#define ACTIVEPOWERMIN		8
+
+#define ENABLEMODBUS
+//#define ENABLEMQTT
+
+
 
 
 
 int main (int argc, char *argv[])
 {
-    MQTTClient client;
-    MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
-    MQTTClient_message pubmsg = MQTTClient_message_initializer;
-    MQTTClient_deliveryToken token;
-    int rc;
-
 
 #ifdef ENABLEMODBUS
     int fd;
     int error = 0;
     char serialdev[] = "/dev/ttyUSB0";
+    int ReceivedData;
+    float ConvertedData;
     //serialdev[11]=*argv[1];
 
     puts(serialdev);
@@ -60,15 +69,24 @@ int main (int argc, char *argv[])
 
     fd = openserial(serialdev);
 
-    if (!fd) {
+    if (!fd)
+    {
         fprintf(stderr, "Error while initializing %s.\n", serialdev);
         //return 1;
     }
-
-    ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[1], 1);
+    ReceivedData = ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[CURRENT], 1);
     closeserial(fd);
+    ConvertedData = ConvertToRegisterUnits(ReceivedData, CURRENT);
+    printf("data = %.2f\n", ConvertedData);
 #endif
 
+#ifdef ENABLEMQTT
+
+    MQTTClient client;
+    MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
+    MQTTClient_message pubmsg = MQTTClient_message_initializer;
+    MQTTClient_deliveryToken token;
+    int rc;
 
     if ((rc = MQTTClient_create(&client, ADDRESS, CLIENTID,
         MQTTCLIENT_PERSISTENCE_NONE, NULL)) != MQTTCLIENT_SUCCESS)
@@ -107,6 +125,8 @@ int main (int argc, char *argv[])
         printf("Failed to disconnect, return code %d\n", rc);
     MQTTClient_destroy(&client);
     return rc;
+
+#endif
 }
 
 

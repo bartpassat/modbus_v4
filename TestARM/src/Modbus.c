@@ -23,21 +23,9 @@
 #define MODBUSRXBUFFERSIZE 20
 
 unsigned char RawRxData[MODBUSRXBUFFERSIZE];
+unsigned char FilteredData[5];
 u_int8_t valid = 0;
 
-
-/*
- * We need to define the modbus device adresses in a array, we need also to define the adresses names in another array.
- */
-
-static int RegistersCircutorCVM1D[] = {
-		0x0000, 0x0032, 0x0044, 0x0002, 0x0034, 0x0046, 0x0004, 0x0036, 0x0048
-};
-
-static u_int8_t RegisterNamesCircutorCVM1D[][50] = {
-		"Actual Voltage", "Maximum Voltage", "Minimum Voltage", "Actual Current", "Maximum Current", "Minimum Current", "Actual Active Power",
-		"Maximum Active Power", "Minimum Active Power"
-};
 
 /* Table of CRC values for high–order byte */
 static unsigned char auchCRCHi[] = {
@@ -98,17 +86,17 @@ unsigned short CRC16 (unsigned char* puchMsg, unsigned short usDataLen )
 }
 
 
-void ReadAddress(int l_fd, unsigned char l_slaveaddress, unsigned int l_address, unsigned char l_debug)
+int ReadAddress(int l_fd, unsigned char l_slaveaddress, unsigned int l_address, unsigned char l_debug)
 {
 	unsigned char l_Counter;
 	unsigned short l_crc16;
 	unsigned char l_modbusframe[8];
 	l_modbusframe[0] = l_slaveaddress;	// Modbus slave address
 	l_modbusframe[1] = 0x04;			// Function code
-	l_modbusframe[2] = 0x00;	// Hi byte of register
+	l_modbusframe[2] = 0x00;			// Hi byte of register
 	l_modbusframe[3] = l_address;		// lo byte of register
 	l_modbusframe[4] = 0x00;
-	l_modbusframe[5] = 0x02;				// All registers we need are 16-bit
+	l_modbusframe[5] = 0x02;			// All registers we need are 16-bit
 
 	l_crc16 = CRC16(l_modbusframe, 6);
 	l_modbusframe[6] = l_crc16;			// Lo byte of CRC16
@@ -155,4 +143,11 @@ void ReadAddress(int l_fd, unsigned char l_slaveaddress, unsigned int l_address,
 			printf("%#02x. \n", RawRxData[8]);
 		}
 	}
+
+//	FilteredData[0] = RawRxData[5];
+//	FilteredData[1] = RawRxData[6];
+//	int y = ((FilteredData[0]*256)+FilteredData[1]);
+	int FilteredData = ((RawRxData[5]*256)+RawRxData[6]);
+
+	return FilteredData;
 }

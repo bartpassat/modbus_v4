@@ -8,11 +8,11 @@
 #ifndef MODBUS_CIRCUTOR_CVM_1D_REGISTERS_H_
 #define MODBUS_CIRCUTOR_CVM_1D_REGISTERS_H_
 
-/*
- * We need to define the modbus device addresses in a array, we need also to define the addresses names in another array.
- */
+// Circutor CVM 1D Device address
 static int Circutor_CVM_1D_Address = 0x01;
 
+
+// Circutor CVM 1D Register addresses
 static int Registers_Circutor_CVM_1D[] = {
 		0x0000, 0x0032, 0x0044,
 		0x0002, 0x0034, 0x0046,
@@ -28,6 +28,8 @@ static int Registers_Circutor_CVM_1D[] = {
 
 };
 
+
+// Circutor CVM 1D Register names
 static char RegisterNames_Circutor_CVM_1D[][50] = {
 		"Actual Voltage", "Maximum Voltage", "Minimum Voltage",
 		"Actual Current", "Maximum Current", "Minimum Current",
@@ -45,5 +47,6 @@ static char RegisterNames_Circutor_CVM_1D[][50] = {
 		"Partial Generated Total Reactive Energy"
 };
 
+float ConvertToRegisterUnits(int data, int type);
 
 #endif /* MODBUS_CIRCUTOR_CVM_1D_REGISTERS_H_ */
