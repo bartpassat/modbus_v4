@@ -27,6 +27,8 @@ unsigned char FilteredData[5];
 u_int8_t valid = 0;
 
 
+
+
 /* Table of CRC values for high–order byte */
 static unsigned char auchCRCHi[] = {
 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81,
@@ -144,10 +146,11 @@ int ReadAddress(int l_fd, unsigned char l_slaveaddress, unsigned int l_address, 
 		}
 	}
 
-//	FilteredData[0] = RawRxData[5];
-//	FilteredData[1] = RawRxData[6];
-//	int y = ((FilteredData[0]*256)+FilteredData[1]);
+	// filtering the data that we need and combine it.
 	int FilteredData = ((RawRxData[5]*256)+RawRxData[6]);
 
 	return FilteredData;
 }
+
+
+

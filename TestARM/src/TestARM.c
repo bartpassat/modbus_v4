@@ -47,7 +47,7 @@
 #define ACTIVEPOWERMIN		8
 
 #define ENABLEMODBUS
-//#define ENABLEMQTT
+#define ENABLEMQTT
 
 
 
@@ -57,12 +57,14 @@ int main (int argc, char *argv[])
 {
 
 #ifdef ENABLEMODBUS
+
+	struct mqtt mqttdata;
+	strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
     int fd;
     int error = 0;
     char serialdev[] = "/dev/ttyUSB0";
-    int ReceivedData;
-    float ConvertedData;
-    //serialdev[11]=*argv[1];
+
+
 
     puts(serialdev);
     puts ("Open port");
@@ -74,10 +76,10 @@ int main (int argc, char *argv[])
         fprintf(stderr, "Error while initializing %s.\n", serialdev);
         //return 1;
     }
-    ReceivedData = ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[CURRENT], 1);
+
+    Readmodbus_CircutorData_MqttTopicPayload(ACTIVEPOWER, fd, &mqttdata);
     closeserial(fd);
-    ConvertedData = ConvertToRegisterUnits(ReceivedData, CURRENT);
-    printf("data = %.2f\n", ConvertedData);
+
 #endif
 
 #ifdef ENABLEMQTT
@@ -95,6 +97,11 @@ int main (int argc, char *argv[])
          exit(EXIT_FAILURE);
     }
 
+    else
+    {
+    	printf("Client creation ok.\n");
+    }
+
     conn_opts.keepAliveInterval = 20;
     conn_opts.cleansession = 1;
 
@@ -104,20 +111,31 @@ int main (int argc, char *argv[])
         printf("Failed to connect, return code %d\n", rc);
         exit(EXIT_FAILURE);
     }
+    else
+    {
+    	printf("Client connect ok.\n");
+    }
 
-    pubmsg.payload = PAYLOAD;
-    pubmsg.payloadlen = (int)strlen(PAYLOAD);
+
+    pubmsg.payload = (char *) malloc(20);
+    sprintf(pubmsg.payload, "%f", mqttdata.Payload);
+    pubmsg.payloadlen = (int)strlen(pubmsg.payload);
     pubmsg.qos = QOS;
     pubmsg.retained = 0;
-    if ((rc = MQTTClient_publishMessage(client, TOPIC, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+    if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
     {
          printf("Failed to publish message, return code %d\n", rc);
          exit(EXIT_FAILURE);
     }
+    else
+    {
+    	printf("Message published.\n");
+    }
 
     printf("Waiting for up to %d seconds for publication of %s\n"
             "on topic %s for client with ClientID: %s\n",
-            (int)(TIMEOUT/1000), PAYLOAD, TOPIC, CLIENTID);
+            (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+
     rc = MQTTClient_waitForCompletion(client, token, TIMEOUT);
     printf("Message with delivery token %d delivered\n", token);
 

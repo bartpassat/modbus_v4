@@ -31,22 +31,38 @@ static int Registers_Circutor_CVM_1D[] = {
 
 // Circutor CVM 1D Register names
 static char RegisterNames_Circutor_CVM_1D[][50] = {
-		"Actual Voltage", "Maximum Voltage", "Minimum Voltage",
-		"Actual Current", "Maximum Current", "Minimum Current",
-		"Actual Active Power", "Maximum Active Power", "Minimum Active Power",
-		"Actual Reactive Power", "Maximum Reactive Power", "Minimum Reactive Power",
-		"Actual Inductive Reactive Power", "Maximum Inductive Reactive Power", "Minimum Inductive Reactive Power",
-		"Actual Capacitive Inductive Power", "Maximum Capacitive Inductive Power", "Minimum Capacitive Inductive Power",
-		"Actual Apparent power", "Maximum Apparent power", "Minimum Apparent power",
-		"Actual Power Factor", "Maximum Power Factor", "Minimum Power Factor",
-		"Actual Maximum Demand", "Maximum Maximum Demand", "Minimum Maximum Demand",
-		"Active energy", "Inductive Reactive Energy", "Capacitive Reactive Energy", "Reactive Energy", "Partial Active Energy",
-		"Partial Inductive Reactive Energy", "Partial Capacitive Reactive Energy", "Partial Reactive Energy", "Generated Active Energy",
-		"Generated Inductive Reactive Energy", "Generated Capacitive Reactive Energy", "Generated Total Reactive Energy",
-		"Partial Generated Active Energy", "Partial Generated Inductive Reactive Energy", "Generated Capacitive Reactive Energy",
-		"Partial Generated Total Reactive Energy"
+		"ActualVoltage", "MaximumVoltage", "MinimumVoltage",
+		"ActualCurrent", "MaximumCurrent", "MinimumCurrent",
+		"ActualActivePower", "MaximumActivePower", "MinimumActivePower",
+		"ActualReactivePower", "MaximumReactivePower", "MinimumReactivePower",
+		"ActualInductiveReactivePower", "MaximumInductiveReactivePower", "MinimumInductiveReactivePower",
+		"ActualCapacitiveInductivePower", "MaximumCapacitiveInductivePower", "MinimumCapacitiveInductivePower",
+		"ActualApparentPower", "MaximumApparentpower", "MinimumApparentpower",
+		"ActualPowerFactor", "MaximumPowerFactor", "MinimumPowerFactor",
+		"ActualMaximumDemand", "MaximumMaximumDemand", "MinimumMaximumDemand",
+		"ActiveEnergy", "InductiveReactiveEnergy", "CapacitiveReactiveEnergy", "ReactiveEnergy", "PartialActiveEnergy",
+		"PartialInductiveReactiveEnergy", "PartialCapacitiveReactiveEnergy", "PartialReactiveEnergy", "GeneratedActiveEnergy",
+		"GeneratedInductiveReactiveEnergy", "GeneratedCapacitiveReactiveEnergy", "GeneratedTotalReactiveEnergy",
+		"PartialGeneratedActiveEnergy", "PartialGeneratedInductiveReactiveEnergy", "GeneratedCapacitiveReactiveEnergy",
+		"PartialGeneratedTotalReactiveEnergy"
+};
+
+/* If topic sends to much unused data, maybe it is better to make a extra array  and loop over the topic until we reach a Line Feed
+ * and replace them with a zero terminated string.
+
+*/
+
+struct mqtt
+{
+	unsigned char Topic[100];
+	unsigned char TopicPartOne[45];
+	unsigned char TopicPartTwo[50];
+	float Payload;
+	int SizeTopicPartOne;
+    int SizeRegisterArray;
 };
 
 float ConvertToRegisterUnits(int data, int type);
+void Readmodbus_CircutorData_MqttTopicPayload(int type, int fd, struct mqtt *data);
 
 #endif /* MODBUS_CIRCUTOR_CVM_1D_REGISTERS_H_ */
