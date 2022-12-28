@@ -5,11 +5,11 @@
  *      Author: bart
  */
 
-#include <ctype.h>
-#include <unistd.h>
+//#include <ctype.h>
+//#include <unistd.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <termios.h>
+//#include <stdlib.h>
+//#include <termios.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
@@ -40,7 +40,7 @@ float ConvertToRegisterUnits(int data, int type)
 		ConvertedData = (ConvertedData/10);
 	}
 
-	if (type == CURRENT || type == ACTIVEPOWER)
+	else
 	{
 		ConvertedData = (float) data;
 		ConvertedData = (ConvertedData/100);
@@ -70,7 +70,7 @@ void Readmodbus_CircutorData_MqttTopicPayload(int type, int fd, struct mqtt *dat
     unsigned char Topic[size];
 
 
-    ReceivedData = ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[type], 1);
+    ReceivedData = ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[type], 0); // debug the fram set 4the arg to 1.
     data->Payload = ConvertToRegisterUnits(ReceivedData, type);
 
     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);

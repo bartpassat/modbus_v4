@@ -14105,3 +14105,1774 @@ Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
 default username:password is [debian:temppwd]
 
  
+07:42:14 **** Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:60:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   60 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:123:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  123 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:133:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  133 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  134 |             "on topic %s for client with ClientID: %s\n",
+  135 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+07:46:58 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:61:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   61 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:129:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  129 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:139:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  139 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  140 |             "on topic %s for client with ClientID: %s\n",
+  141 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+07:57:10 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:125:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  125 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:135:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  135 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  136 |             "on topic %s for client with ClientID: %s\n",
+  137 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+08:12:54 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:129:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  129 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:139:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  139 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  140 |             "on topic %s for client with ClientID: %s\n",
+  141 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+08:13:38 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:129:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  129 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:139:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  139 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  140 |             "on topic %s for client with ClientID: %s\n",
+  141 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+08:14:36 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:129:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  129 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:139:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  139 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  140 |             "on topic %s for client with ClientID: %s\n",
+  141 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+08:15:37 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:129:57: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  129 |     if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                 ~~~~~~~~^~~~~~
+      |                                                         |
+      |                                                         unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:139:62: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  139 |     printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                             ~^
+      |                                                              |
+      |                                                              char *
+      |                                                             %p
+  140 |             "on topic %s for client with ClientID: %s\n",
+  141 |             (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                  ~~~~~~~~~~~~~~               
+      |                                        |
+      |                                        void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+09:40:05 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:126:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  126 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:136:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  136 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  137 |                 "on topic %s for client with ClientID: %s\n",
+  138 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:169:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  169 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:179:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  179 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  180 |                 "on topic %s for client with ClientID: %s\n",
+  181 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:212:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  212 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:222:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  222 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  223 |                 "on topic %s for client with ClientID: %s\n",
+  224 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+09:47:28 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:126:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  126 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:136:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  136 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  137 |                 "on topic %s for client with ClientID: %s\n",
+  138 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:169:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  169 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:179:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  179 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  180 |                 "on topic %s for client with ClientID: %s\n",
+  181 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:212:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  212 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:222:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  222 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  223 |                 "on topic %s for client with ClientID: %s\n",
+  224 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+09:50:46 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:123:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  123 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:133:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  133 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  134 |                 "on topic %s for client with ClientID: %s\n",
+  135 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:163:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  163 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:173:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  173 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  174 |                 "on topic %s for client with ClientID: %s\n",
+  175 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:203:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  203 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:213:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  213 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  214 |                 "on topic %s for client with ClientID: %s\n",
+  215 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+09:51:45 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:57:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   57 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:123:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  123 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:133:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  133 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  134 |                 "on topic %s for client with ClientID: %s\n",
+  135 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:163:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  163 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:173:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  173 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  174 |                 "on topic %s for client with ClientID: %s\n",
+  175 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:203:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  203 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:213:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  213 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  214 |                 "on topic %s for client with ClientID: %s\n",
+  215 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+14:26:06 **** Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building file: ../src/TestARM.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TestARM.d" -MT"src/TestARM.o" -o "src/TestARM.o" "../src/TestARM.c"
+../src/TestARM.c: In function ‘main’:
+../src/TestARM.c:58:17: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   58 |  strcpy(mqttdata.TopicPartOne, "ProjectenVoorHetWerkveld/CircutorEnergyMeter/");
+      |         ~~~~~~~~^~~~~~~~~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from ../src/TestARM.c:22:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/TestARM.c:124:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  124 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:134:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  134 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  135 |                 "on topic %s for client with ClientID: %s\n",
+  136 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:164:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  164 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:174:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  174 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  175 |                 "on topic %s for client with ClientID: %s\n",
+  176 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:204:61: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  204 |         if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                     ~~~~~~~~^~~~~~
+      |                                                             |
+      |                                                             unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:214:66: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  214 |         printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                 ~^
+      |                                                                  |
+      |                                                                  char *
+      |                                                                 %p
+  215 |                 "on topic %s for client with ClientID: %s\n",
+  216 |                 (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                      ~~~~~~~~~~~~~~               
+      |                                            |
+      |                                            void *
+../src/TestARM.c:245:69: warning: pointer targets in passing argument 2 of ‘MQTTClient_publishMessage’ differ in signedness [-Wpointer-sign]
+  245 |                 if ((rc = MQTTClient_publishMessage(client, mqttdata.Topic, &pubmsg, &token)) != MQTTCLIENT_SUCCESS)
+      |                                                             ~~~~~~~~^~~~~~
+      |                                                                     |
+      |                                                                     unsigned char *
+In file included from ../src/TestARM.c:29:
+../src/MQTTClient.h:1277:74: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+ 1277 | LIBMQTT_API int MQTTClient_publishMessage(MQTTClient handle, const char* topicName, MQTTClient_message* msg, MQTTClient_deliveryToken* dt);
+      |                                                              ~~~~~~~~~~~~^~~~~~~~~
+../src/TestARM.c:255:74: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+  255 |                 printf("Waiting for up to %d seconds for publication of %s\n"
+      |                                                                         ~^
+      |                                                                          |
+      |                                                                          char *
+      |                                                                         %p
+  256 |                         "on topic %s for client with ClientID: %s\n",
+  257 |                         (int)(TIMEOUT/1000), pubmsg.payload, mqttdata.Topic, CLIENTID);
+      |                                              ~~~~~~~~~~~~~~               
+      |                                                    |
+      |                                                    void *
+In file included from ../src/TestARM.c:25:
+At top level:
+../src/Modbus_Circutor_CVM_1D_Registers.h:33:13: warning: ‘RegisterNames_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   33 | static char RegisterNames_Circutor_CVM_1D[][50] = {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/TestARM.c
+../src/Modbus_Circutor_CVM_1D_Registers.h:16:12: warning: ‘Registers_Circutor_CVM_1D’ defined but not used [-Wunused-variable]
+   16 | static int Registers_Circutor_CVM_1D[] = {
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+../src/Modbus_Circutor_CVM_1D_Registers.h:12:12: warning: ‘Circutor_CVM_1D_Address’ defined but not used [-Wunused-variable]
+   12 | static int Circutor_CVM_1D_Address = 0x01;
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:08:13 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:09:58 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:11:05 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:11:16 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:11:28 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c:63:72: warning: ‘struct mqtt’ declared inside parameter list will not be visible outside of this definition or declaration
+   63 | void Readmodbus_CircutorData_MqttTopicPayload(int type, int fd, struct mqtt *data)
+      |                                                                        ^~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:67:9: error: invalid use of undefined type ‘struct mqtt’
+   67 |     data->SizeTopicPartOne = 45;
+      |         ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:68:9: error: invalid use of undefined type ‘struct mqtt’
+   68 |     data->SizeRegisterArray = 50;
+      |         ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:69:20: error: invalid use of undefined type ‘struct mqtt’
+   69 |     int size = data->SizeTopicPartOne + data->SizeRegisterArray;
+      |                    ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:69:45: error: invalid use of undefined type ‘struct mqtt’
+   69 |     int size = data->SizeTopicPartOne + data->SizeRegisterArray;
+      |                                             ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:73:36: error: ‘Circutor_CVM_1D_Address’ undeclared (first use in this function)
+   73 |     ReceivedData = ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[type], 0); // debug the fram set 4the arg to 1.
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:73:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/Modbus_Circutor_CVM_1D_Registers.c:73:61: error: ‘Registers_Circutor_CVM_1D’ undeclared (first use in this function)
+   73 |     ReceivedData = ReadAddress(fd, Circutor_CVM_1D_Address, Registers_Circutor_CVM_1D[type], 0); // debug the fram set 4the arg to 1.
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:74:9: error: invalid use of undefined type ‘struct mqtt’
+   74 |     data->Payload = ConvertToRegisterUnits(ReceivedData, type);
+      |         ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: error: invalid use of undefined type ‘struct mqtt’
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |                ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:32: error: ‘RegisterNames_Circutor_CVM_1D’ undeclared (first use in this function)
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:78:25: error: invalid use of undefined type ‘struct mqtt’
+   78 |     for (i = 0; i < data->SizeTopicPartOne; i++)
+      |                         ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:80:21: error: invalid use of undefined type ‘struct mqtt’
+   80 |      Topic[i] = data->TopicPartOne[i];
+      |                     ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:82:25: error: invalid use of undefined type ‘struct mqtt’
+   82 |     for (i = 0; i < data->SizeRegisterArray; i++)
+      |                         ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:84:16: error: invalid use of undefined type ‘struct mqtt’
+   84 |      Topic[data->SizeTopicPartOne + i] = data->TopicPartTwo[i];
+      |                ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:84:46: error: invalid use of undefined type ‘struct mqtt’
+   84 |      Topic[data->SizeTopicPartOne + i] = data->TopicPartTwo[i];
+      |                                              ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: error: invalid use of undefined type ‘struct mqtt’
+   87 |     strcpy(data->Topic, Topic);
+      |                ^~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+make[1]: *** [src/subdir.mk:110: src/Modbus_Circutor_CVM_1D_Registers.o] Fout 1
+make: *** [makefile:50: all] Fout 2
+"make all" terminated with exit code 2. Build might be incomplete.
+15:11:37 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:11:42 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:11:50 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:11:55 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:12:01 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:12:06 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:12:11 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:5: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |     ^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:5: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../src/Modbus_Circutor_CVM_1D_Registers.c:23:1: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+   22 | #include "Modbus_Circutor_CVM_1D_Registers.h"
+  +++ |+#include <string.h>
+   23 | 
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: note: expected ‘char *’ but argument is of type ‘unsigned char *’
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: note: expected ‘char *’ but argument is of type ‘unsigned char *’
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: note: expected ‘const char *’ but argument is of type ‘unsigned char *’
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:13:26 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:19:53 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+Building file: ../src/Modbus_Circutor_CVM_1D_Registers.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Modbus_Circutor_CVM_1D_Registers.d" -MT"src/Modbus_Circutor_CVM_1D_Registers.o" -o "src/Modbus_Circutor_CVM_1D_Registers.o" "../src/Modbus_Circutor_CVM_1D_Registers.c"
+../src/Modbus_Circutor_CVM_1D_Registers.c: In function ‘Readmodbus_CircutorData_MqttTopicPayload’:
+../src/Modbus_Circutor_CVM_1D_Registers.c:76:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   76 |     strcpy(data->TopicPartTwo, RegisterNames_Circutor_CVM_1D[type]);
+      |            ~~~~^~~~~~~~~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:16: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |            ~~~~^~~~~~~
+      |                |
+      |                unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:39: note: expected ‘char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                      ~~~~~~~~~~~~~~~~~^~~~~~
+../src/Modbus_Circutor_CVM_1D_Registers.c:87:25: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness [-Wpointer-sign]
+   87 |     strcpy(data->Topic, Topic);
+      |                         ^~~~~
+      |                         |
+      |                         unsigned char *
+In file included from ../src/Modbus_Circutor_CVM_1D_Registers.c:18:
+/usr/arm-linux-gnueabihf/include/string.h:122:70: note: expected ‘const char * restrict’ but argument is of type ‘unsigned char *’
+  122 | extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+      |                                               ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Finished building: ../src/Modbus_Circutor_CVM_1D_Registers.c
+ 
+Building target: TestARM
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "TestARM" ./src/Base64.o ./src/Clients.o ./src/Heap.o ./src/LinkedList.o ./src/Log.o ./src/MQTTClient.o ./src/MQTTPacket.o ./src/MQTTPacketOut.o ./src/MQTTPersistence.o ./src/MQTTPersistenceDefault.o ./src/MQTTProperties.o ./src/MQTTProtocolClient.o ./src/MQTTProtocolOut.o ./src/MQTTReasonCodes.o ./src/MQTTTime.o ./src/Messages.o ./src/Modbus.o ./src/Modbus_Circutor_CVM_1D_Registers.o ./src/OsWrapper.o ./src/Proxy.o ./src/SHA1.o ./src/SSLSocket.o ./src/Serial.o ./src/Socket.o ./src/SocketBuffer.o ./src/StackTrace.o ./src/TestARM.o ./src/Thread.o ./src/Tree.o ./src/WebSocket.o ./src/utf-8.o    -lpthread -ldl
+Finished building target: TestARM
+ 
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
+15:20:16 **** Incremental Build of configuration Debug for project TestARM ****
+make all 
+make[1]: Er hoeft niets gedaan te worden voor 'main-build'.
+scp TestARM debian@192.168.1.251:/home/debian/BBBTest
+Debian GNU/Linux 10
+
+BeagleBoard.org Debian Buster IoT Image 2020-04-06
+
+Support: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian
+
+default username:password is [debian:temppwd]
+
+ 
